@@ -7,4 +7,5 @@
 
 {%for task in tasks%}
 <p>{{task}}</p>
+<a href="{% url 'update-task' task.id %}">Update</a>
 {% endfor %}
