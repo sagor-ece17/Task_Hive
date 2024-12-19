@@ -28,9 +28,6 @@ uv venv
 Install dependencies
 
 ```bash
-  pip install -r requirements.txt
-
-  or 
   uv pip install Django
 ```
 Go to the project directory
