@@ -24,19 +24,19 @@ uv venv
 .venv\Scripts\activate 
 ```
 
-Go to the project directory
-
-```bash
-  cd Task Hive
-```
 
 Install dependencies
 
 ```bash
   pip install -r requirements.txt
 
-or 
-uv pip install Django
+  or 
+  uv pip install Django
+```
+Go to the project directory
+
+```bash
+  cd task_hive
 ```
 
 Start the server
