@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.http import HttpResponse
@@ -10,5 +10,11 @@ def index(request):
     form = TaskForm()
     tasks = Task.objects.all()
 
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+        return redirect('/')
     context = {'tasks' : tasks, 'TaskForm':form}
     return render(request, 'tasks.html', context)
